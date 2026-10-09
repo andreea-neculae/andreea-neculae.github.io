@@ -11,7 +11,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Andreea Neculae — Real Estate Writer and Data Journalist">
-  <meta property="og:description" content="Research-driven market reports on coworking, flexible workspace and rental trends.">
+  <meta property="og:description" content="Research-driven market reports on coworking, flexible workspace and commercial real estate trends.">
   <meta property="og:url" content="https://andreea-neculae.github.io/">
   <meta property="og:image" content="https://andreea-neculae.github.io/andreea-neculae.jpg">
   <meta property="profile:first_name" content="Andreea">
@@ -26,7 +26,7 @@
     "url": "https://andreea-neculae.github.io/",
     "name": "Andreea Neculae",
     "dateCreated": "2026-10-09T16:00:00+03:00",
-    "dateModified": "2026-10-09T16:35:00+03:00",
+    "dateModified": "2026-10-09T17:30:00+03:00",
     "mainEntity": {
       "@type": "Person",
       "@id": "https://andreea-neculae.github.io/#person",
@@ -34,7 +34,7 @@
       "givenName": "Andreea",
       "familyName": "Neculae",
       "description": "Real estate writer and data journalist",
-      "jobTitle": "Writer and Market Analyst",
+      "jobTitle": "Writer and Data Journalist",
       "url": "https://andreea-neculae.github.io/",
       "image": "https://andreea-neculae.github.io/andreea-neculae.jpg",
       "worksFor": [
@@ -58,96 +58,334 @@
         "https://www.coworkingcafe.com/blog/author/andreeaneculae/",
         "https://www.rentcafe.com/blog/author/andreeaneculae/",
         "https://coworkingmag.com/author/andreeaneculae/",
-        "https://www.workcafe.com/blog/author/andreeaneculae/"
+        "https://www.workcafe.com/blog/author/andreeaneculae/",
+        "https://blog.credaglobal.org/contributor/andreea-neculae/"
       ]
     }
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #faf8f5;
-      --text: #1f1d1a;
-      --muted: #6b655d;
-      --accent: #9a4a2e;
-      --rule: #e4ded5;
+      --bg: #ffffff;
+      --text: #1d2733;
+      --muted: #66768a;
+      --blue: #a9d2f0;
+      --blue-mid: #cfe6f8;
+      --blue-soft: #eef6fd;
+      --blue-deep: #2c6a9a;
+      --ink-on-blue: #12324a;
+      --rule: #e6edf3;
       --card: #ffffff;
+      --shadow: 0 1px 2px rgba(29,39,51,.04), 0 8px 24px rgba(44,106,154,.07);
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #171614;
-        --text: #ece8e2;
-        --muted: #a39d94;
-        --accent: #e0916f;
-        --rule: #2e2b27;
-        --card: #1f1d1a;
+        --bg: #0f151c;
+        --text: #e7edf3;
+        --muted: #93a3b4;
+        --blue: #6aa8d6;
+        --blue-mid: #1f3850;
+        --blue-soft: #16242f;
+        --blue-deep: #a9d2f0;
+        --ink-on-blue: #0d2233;
+        --rule: #222c37;
+        --card: #141e28;
+        --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
       }
     }
     * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
     body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font: 17px/1.65 Georgia, "Times New Roman", serif;
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 400 17px/1.7 "DM Sans", system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
     }
-    main { max-width: 720px; margin: 0 auto; padding: 56px 16px 72px; }
-    header { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
-    header img {
-      width: 112px; height: 112px; border-radius: 50%;
-      object-fit: cover; border: 1px solid var(--rule);
+    a { color: var(--blue-deep); text-decoration: none; }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+    .serif { font-family: "Fraunces", Georgia, serif; }
+
+    /* Nav */
+    nav { padding: 22px 0; }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .mark { font-family: "Fraunces", Georgia, serif; font-size: 1.15rem; color: var(--text); }
+    .navlinks { display: flex; gap: 22px; align-items: center; font-size: .92rem; }
+    .navlinks a { color: var(--muted); }
+    .navlinks a:hover { color: var(--blue-deep); }
+    @media (max-width: 640px) { .navlinks a:not(.button) { display: none; } }
+
+    .button {
+      display: inline-block; padding: 10px 22px; border-radius: 999px;
+      background: var(--blue); color: var(--ink-on-blue) !important; font-weight: 600;
+      transition: transform .15s, box-shadow .15s;
     }
-    h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 4px; font-weight: normal; }
-    .tagline { color: var(--muted); margin: 0; font-family: system-ui, sans-serif; font-size: 0.95rem; }
+    .button:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(44,106,154,.22); }
+
+    /* Hero */
+    .hero { position: relative; padding: 56px 0 72px; overflow: hidden; isolation: isolate; }
+    .hero .wrap { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+    .eyebrow {
+      display: inline-block; font-size: .72rem; font-weight: 600; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--blue-deep); background: var(--blue-soft);
+      padding: 5px 13px; border-radius: 999px; margin-bottom: 18px;
+    }
+    h1 {
+      font-family: "Fraunces", Georgia, serif; font-weight: 400;
+      font-size: clamp(2.6rem, 7vw, 4.2rem); line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 16px;
+    }
+    .tagline { font-size: 1.15rem; color: var(--muted); max-width: 30em; margin: 0 0 28px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .ghost { font-weight: 500; padding: 10px 6px; }
+    .ghost:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+    .portrait { width: 220px; height: 220px; }
+    .portrait img {
+      width: 220px; height: 220px; object-fit: cover; border-radius: 50%;
+      background: var(--blue-soft); box-shadow: var(--shadow);
+    }
+    @media (max-width: 680px) {
+      .hero { padding: 24px 0 48px; }
+      .hero .wrap { grid-template-columns: 1fr; gap: 36px; }
+      .portrait { order: -1; width: 160px; height: 160px; }
+      .portrait img { width: 160px; height: 160px; }
+    }
+
+    /* As seen in */
+    .seen { background: var(--blue-soft); padding: 26px 0; }
+    .seen .wrap { display: flex; flex-wrap: wrap; gap: 10px 30px; align-items: center; justify-content: center; }
+    .seen span.label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+    .seen span.outlet { font-family: "Fraunces", Georgia, serif; font-size: 1.08rem; color: var(--text); opacity: .8; }
+
+    /* Sections */
+    section.block { padding: 72px 0 8px; }
+    .kicker { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--blue-deep); font-weight: 600; margin-bottom: 6px; }
     h2 {
-      font-family: system-ui, sans-serif; font-size: 0.78rem; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--muted); margin: 44px 0 12px;
-      border-top: 1px solid var(--rule); padding-top: 20px;
+      font-family: "Fraunces", Georgia, serif; font-weight: 400; font-size: clamp(1.8rem, 4vw, 2.3rem);
+      letter-spacing: -0.015em; line-height: 1.15; margin: 0 0 28px;
     }
-    a { color: var(--accent); text-underline-offset: 3px; }
-    ul { padding-left: 1.1em; }
-    li { margin-bottom: 6px; }
-    .links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 18px;
-      font-family: system-ui, sans-serif; font-size: 0.92rem; }
-    footer { margin-top: 56px; color: var(--muted); font-family: system-ui, sans-serif; font-size: 0.82rem; }
+    h2 em { font-style: italic; font-weight: 300; color: var(--blue-deep); }
+
+    .about { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; }
+    .about .lead { font-family: "Fraunces", Georgia, serif; font-weight: 300; font-size: 1.45rem; line-height: 1.5; margin: 0; }
+    .about p { margin: 0 0 16px; }
+    .facts { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 10px; }
+    .facts li { display: flex; gap: 12px; align-items: baseline; font-size: .95rem; }
+    .facts li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--blue); flex: none; transform: translateY(-1px); }
+    @media (max-width: 680px) { .about { grid-template-columns: 1fr; gap: 20px; } }
+
+    /* Cards */
+    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+    .card {
+      display: flex; flex-direction: column; gap: 10px; padding: 22px 22px 20px;
+      background: var(--card); border: 1px solid var(--rule); border-radius: 18px;
+      box-shadow: var(--shadow); color: var(--text);
+      transition: transform .18s, border-color .18s;
+    }
+    .card:hover { transform: translateY(-3px); border-color: var(--blue); }
+    .tag {
+      align-self: flex-start; font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--blue-deep); background: var(--blue-soft); padding: 3px 10px; border-radius: 999px;
+    }
+    .card .title { font-family: "Fraunces", Georgia, serif; font-size: 1.15rem; line-height: 1.35; }
+    .card .src { margin-top: auto; font-size: .88rem; color: var(--muted); }
+    .card .src::after { content: " \2197"; color: var(--blue-deep); }
+
+    /* Chips */
+    .chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+    .chips a {
+      display: inline-block; padding: 8px 18px; border-radius: 999px; background: var(--blue-soft);
+      font-size: .92rem; font-weight: 500; border: 1px solid transparent; transition: border-color .15s;
+    }
+    .chips a:hover { border-color: var(--blue); }
+
+    /* Contact */
+    .contact {
+      margin: 88px 0 0; padding: 56px 32px; border-radius: 28px; text-align: center;
+      background: linear-gradient(135deg, var(--blue-mid), var(--blue-soft));
+      position: relative; overflow: hidden;
+    }
+    .contact::before {
+      content: ""; position: absolute; width: 260px; height: 260px; border-radius: 50%;
+      right: -80px; top: -110px; background: var(--blue); opacity: .35;
+    }
+    .contact h2 { margin-bottom: 10px; position: relative; }
+    .contact p { color: var(--muted); margin: 0 0 26px; position: relative; }
+    .contact .button { position: relative; font-size: 1.02rem; padding: 13px 30px; }
+
+    footer { padding: 40px 0 48px; color: var(--muted); font-size: .85rem; }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
   </style>
 </head>
 <body>
-<main>
-  <header>
-    <img src="andreea-neculae.jpg" alt="Portrait of Andreea Neculae" width="112" height="112">
-    <div>
-      <h1>Andreea Neculae</h1>
-      <p class="tagline">Real estate writer and data journalist</p>
+
+<nav>
+  <div class="wrap">
+    <span class="mark">Andreea Neculae</span>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#appearances">Appearances</a>
+      <a href="#coverage">Coverage</a>
+      <a class="button" href="mailto:andreeaneculaei@gmail.com">Contact</a>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <h2>About</h2>
-  <p>Andreea Neculae is a real estate writer and data journalist who covers the flexible workspace industry and commercial real estate. She is a writer and market analyst at CoworkingCafe and CoworkingMag, both divisions of Yardi Systems, where she produces market studies on coworking pricing, market growth, amenities and the shifts changing where people work.</p>
-  <p>She has written for CoworkingCafe and CoworkingMag since 2023 and also contributes to WorkCafe. She previously wrote for RentCafe, starting in 2021. Her research has been cited by The Business Journals, The New York Times and Forbes. She holds an academic background in Language Arts and writes in both English and Romanian.</p>
-  <p>Outside her reporting work, she writes fiction and book reviews.</p>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Writer &amp; data journalist</span>
+      <h1>Andreea Neculae</h1>
+      <p class="tagline">Real estate writer and data journalist, turning coworking and workplace data into stories people actually read.</p>
+      <div class="hero-actions">
+        <a class="button" href="mailto:andreeaneculaei@gmail.com">Get in touch</a>
+        <a class="ghost" href="#appearances">See appearances &darr;</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="andreea-neculae.jpg" alt="Portrait of Andreea Neculae" width="220" height="220">
+    </div>
+  </div>
+</header>
 
-  <h2>Coverage of her research</h2>
-  <ul>
-    <li><a href="https://www.bizjournals.com/sanjose/news/2026/10/08/coworking-cafe-hybrid-workplace-rates-study.html">CoworkingCafe study on hybrid workplace rates</a> — San Jose Business Journal, 2026</li>
-    <li><a href="https://www.bizjournals.com/boston/news/2025/02/14/boston-area-coworking-space-office-vacancies.html">Boston-area coworking space and office vacancies</a> — Boston Business Journal, 2025</li>
-    <li><a href="https://spectrumlocalnews.com/nys/central-ny/news/2025/01/17/study--post-covid--rush-hour-volumes-same--times-spread-out">Study on post-COVID rush-hour traffic patterns</a> — Spectrum News, 2025</li>
-    <li><a href="https://www.newamerica.org/insights/child-care-plus-coworking/introduction-the-rise-of-coworking-spaces-and-the-opportunity-to-broaden-access/">Child Care Plus Coworking: the rise of coworking spaces</a> — New America</li>
-  </ul>
+<div class="seen">
+  <div class="wrap">
+    <span class="label">Research featured in</span>
+    <span class="outlet">The New York Times</span>
+    <span class="outlet">Forbes</span>
+    <span class="outlet">The Business Journals</span>
+    <span class="outlet">Bisnow</span>
+    <span class="outlet">Spectrum News</span>
+    <span class="outlet">WOSU</span>
+  </div>
+</div>
 
-  <h2>Elsewhere</h2>
-  <ul class="links">
-    <li><a href="https://www.wikidata.org/wiki/Q139860651" rel="me">Wikidata</a></li>
-    <li><a href="https://www.linkedin.com/in/andrea-neculae/" rel="me">LinkedIn</a></li>
-    <li><a href="https://www.coworkingcafe.com/blog/author/andreeaneculae/" rel="me">CoworkingCafe</a></li>
-    <li><a href="https://www.rentcafe.com/blog/author/andreeaneculae/" rel="me">RentCafe</a></li>
-    <li><a href="https://coworkingmag.com/author/andreeaneculae/" rel="me">CoworkingMag</a></li>
-    <li><a href="https://www.workcafe.com/blog/author/andreeaneculae/" rel="me">WorkCafe</a></li>
-  </ul>
+<main>
+  <section class="block" id="about">
+    <div class="wrap">
+      <div class="kicker">About</div>
+      <div class="about">
+        <div>
+          <p class="lead">Andreea Neculae is a real estate writer and data journalist who covers the flexible workspace industry and <em>commercial real estate</em>.</p>
+          <ul class="facts">
+            <li>Writer and data journalist, CoworkingCafe and CoworkingMag</li>
+            <li>Contributor to WorkCafe</li>
+            <li>Previously wrote for RentCafe, from 2021</li>
+            <li>Writes in English and Romanian</li>
+          </ul>
+        </div>
+        <div>
+          <p>At CoworkingCafe and CoworkingMag, both divisions of Yardi Systems, she produces market studies on coworking pricing, market growth, amenities and the shifts changing where people work. She has written for both since 2023.</p>
+          <p>Her research has been cited by The Business Journals, The New York Times and Forbes. She holds an academic background in Language Arts. Outside her reporting work, she writes fiction and book reviews.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2>Contact</h2>
-  <p><a href="mailto:andreeaneculaei@gmail.com">andreeaneculaei@gmail.com</a></p>
+  <section class="block" id="appearances">
+    <div class="wrap">
+      <div class="kicker">On air</div>
+      <h2>Media <em>appearances</em></h2>
+      <div class="cards">
+        <a class="card" href="https://www.wosu.org/show/all-sides/2025-03-18/tech-tuesday-two-of-the-best-cities-for-women-in-tech-are-in-ohio">
+          <span class="tag">Radio · 2025</span>
+          <span class="title">Tech Tuesday: two of the best cities for women in tech are in Ohio</span>
+          <span class="src">All Sides, WOSU Public Media</span>
+        </a>
+        <a class="card" href="https://spectrumlocalnews.com/nys/central-ny/news/2025/01/17/study--post-covid--rush-hour-volumes-same--times-spread-out">
+          <span class="tag">Video · 2025</span>
+          <span class="title">Interview on post-COVID rush-hour traffic patterns</span>
+          <span class="src">Spectrum News</span>
+        </a>
+        <a class="card" href="https://www.wosu.org/show/all-sides/2024-11-14/changing-traffic-patterns-in-ohio">
+          <span class="tag">Radio · 2024</span>
+          <span class="title">Changing traffic patterns in Ohio</span>
+          <span class="src">All Sides, WOSU Public Media</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <footer>© 2026 Andreea Neculae</footer>
+  <section class="block" id="contributions">
+    <div class="wrap">
+      <div class="kicker">Bylines</div>
+      <h2>Guest <em>contributions</em></h2>
+      <div class="cards">
+        <a class="card" href="https://www.planetizen.com/features/133110-9-5-anytime-how-telecommuting-changes-traffic-game">
+          <span class="tag">Feature</span>
+          <span class="title">9-5 anytime: how telecommuting changes the traffic game</span>
+          <span class="src">Planetizen</span>
+        </a>
+        <a class="card" href="https://blog.credaglobal.org/contributor/andreea-neculae/">
+          <span class="tag">Contributor</span>
+          <span class="title">Articles on the CREDA blog</span>
+          <span class="src">CREDA</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="coverage">
+    <div class="wrap">
+      <div class="kicker">In the press</div>
+      <h2>Her studies <em>in the press</em></h2>
+      <div class="cards">
+        <a class="card" href="https://www.bizjournals.com/sanjose/news/2026/10/08/coworking-cafe-hybrid-workplace-rates-study.html">
+          <span class="tag">2026</span>
+          <span class="title">CoworkingCafe study on hybrid workplace rates</span>
+          <span class="src">San Jose Business Journal</span>
+        </a>
+        <a class="card" href="https://www.bizjournals.com/boston/news/2025/02/14/boston-area-coworking-space-office-vacancies.html">
+          <span class="tag">2025</span>
+          <span class="title">Boston-area coworking space and office vacancies</span>
+          <span class="src">Boston Business Journal</span>
+        </a>
+        <a class="card" href="https://www.bisnow.com/news/denver/coworking/denver-coworking-growth-127956">
+          <span class="tag">News</span>
+          <span class="title">Denver coworking growth</span>
+          <span class="src">Bisnow</span>
+        </a>
+        <a class="card" href="https://www.newamerica.org/insights/child-care-plus-coworking/introduction-the-rise-of-coworking-spaces-and-the-opportunity-to-broaden-access/">
+          <span class="tag">Report</span>
+          <span class="title">Child Care Plus Coworking: the rise of coworking spaces</span>
+          <span class="src">New America</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="elsewhere">
+    <div class="wrap">
+      <div class="kicker">Find me</div>
+      <h2><em>Elsewhere</em></h2>
+      <ul class="chips">
+        <li><a href="https://www.wikidata.org/wiki/Q139860651" rel="me">Wikidata</a></li>
+        <li><a href="https://www.linkedin.com/in/andrea-neculae/" rel="me">LinkedIn</a></li>
+        <li><a href="https://www.coworkingcafe.com/blog/author/andreeaneculae/" rel="me">CoworkingCafe</a></li>
+        <li><a href="https://coworkingmag.com/author/andreeaneculae/" rel="me">CoworkingMag</a></li>
+        <li><a href="https://www.workcafe.com/blog/author/andreeaneculae/" rel="me">WorkCafe</a></li>
+        <li><a href="https://www.rentcafe.com/blog/author/andreeaneculae/" rel="me">RentCafe</a></li>
+        <li><a href="https://blog.credaglobal.org/contributor/andreea-neculae/" rel="me">CREDA</a></li>
+      </ul>
+
+      <div class="contact" id="contact">
+        <h2>Let&rsquo;s <em>talk</em></h2>
+        <p>For interviews, data requests or collaborations.</p>
+        <a class="button" href="mailto:andreeaneculaei@gmail.com">Contact</a>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Andreea Neculae</span>
+    <span>Real estate writer and data journalist</span>
+  </div>
+</footer>
+
 </body>
 </html>
